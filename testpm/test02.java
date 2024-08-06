@@ -5,12 +5,7 @@ public class test02 {
 	public static void main(String[] args) {
 		
 		// 문제 1
-		int[] number = new int[5];
-		number[0]=30;
-		number[1]=40;
-		number[2]=50;
-		number[3]=60;
-		number[4]=55;
+		int[] number = {30, 40, 50, 60, 55};
 		System.out.println(number[0]+"/"+number[1]+"/"+number[2]+"/"
 				+number[3]+"/"+number[4]);
 		System.out.println("----------------------");
@@ -24,18 +19,14 @@ public class test02 {
 		System.out.println("----------------------");
 		
 		// 문제 3
-		int[] lotto = new int[6];
-		lotto[0]=6;
-		lotto[1]=12;
-		lotto[2]=33;
-		lotto[3]=4;
-		lotto[4]=5;
-		lotto[5]=26;
+		int[] lotto ={6, 12, 33, 4, 5, 26};
 		System.out.println(lotto[2]+2);
 		System.out.println("----------------------");
+		
 		// 문제 4
 		System.out.println(lotto[0]+lotto[2]+lotto[4]);
 		System.out.println("----------------------");
+		
 		// 문제 5
 		lotto[0]=6;
 		lotto[1]=12+lotto[0];
@@ -46,6 +37,7 @@ public class test02 {
 		System.out.println(lotto[0]+"/"+lotto[1]+"/"+lotto[2]+"/"
 				+lotto[3]+"/"+lotto[4]+"/"+lotto[5]);
 		System.out.println("----------------------");
+		
 		// 문제 6
 		lotto[0]=6;
 		lotto[1]=12;
@@ -55,6 +47,7 @@ public class test02 {
 		lotto[5]=26;
 		System.out.println((lotto[3]%2)!=0);
 		System.out.println("----------------------");
+		
 		// 문제 7
 		int money=2750;
 		int pay=10000;
@@ -67,8 +60,7 @@ public class test02 {
 		int []A= {700, 500};
 		int []B= {900, 300};
 		int []C= {650, 150};
-		int []ball= {3, 3};
-		
+		System.out.println(((C[0]>=A[0])&&((C[1]-3)>=B[1]))&&(((C[0]+3)<=B[0])&&C[1]<=A[1]));
 	}
 
 }

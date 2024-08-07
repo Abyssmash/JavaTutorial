@@ -38,7 +38,7 @@ public class _00_basic {
 		int cm1=185;
 		System.out.println(cm1 >= 180);		// A조 조건
 		System.out.println(cm1 >= 170 && cm1 < 180);	// B조 조건
-		System.out.println(cm1 < 170);		// C조 조건
+		System.out.println(cm1 < 170);		//\ C조 조건
 		
 		if(cm1 >= 180) {
 			System.out.println("A조");

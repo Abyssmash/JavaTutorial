@@ -9,5 +9,10 @@ public class Test01 {
 		byte aa =10;
 		System.out.println(a);
 		System.out.println(aa);
+		// 소스 실행 하는 단축키 : Ctrl + f11
+		
+		// 문자열 변수 선언
+		String s="Kimtr";
+		System.out.println(s);
 	}
 }

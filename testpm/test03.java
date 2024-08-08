@@ -68,18 +68,74 @@ public class test03 {
 		// * 분해 연산자 사용: /(몫), %(나머지)
 		
 		int[] b = {45, 34, 64};
+		int maxValue=0;
+		int maxIndex=0;		
+		
+		int temp=a[0]/10+a[0]%10;
+		if(maxValue < temp) {
+			maxValue = temp;
+			maxIndex=0;
+		}
+		temp=a[1]/10+a[1]%10;
+		if(maxValue < temp) {
+			maxValue = temp;
+			maxIndex=1;
+		}
+		temp=a[2]/10+a[2]%10;
+		if(maxValue < temp) {
+			maxValue = temp;
+			maxIndex=2;
+		}
+		System.out.println(maxIndex);
 		
 		// up2 네모는 새, 화살표는 총알, 총알은 직진으로 움직인다.
 		// 총알에 맞는 새의 번호를 출력하시오.
 		// 0번 새 위치: 6,4 / 1번 새 위치: 5, 10 / 2번 새 위치: 9,6
-		
-		int[]x= {6,5,9};
-		int[]y= {4,10,6};
-		
-		// up3 슈팅게임
-		
+		int[] x = {6,5,9};
+		int[] y = {4,10,6};
+		double k = 3.0/2.0;		
+		if(k == (double)x[0]/y[0]) {
+			System.out.println(0);
+		}
+		if(k == (double)x[1]/y[1]) {
+			System.out.println(1);
+		}
+		if(k == (double)x[2]/y[2]) {
+			System.out.println(2);
+		}
 
 		
+		int[]X= {6,5,9};
+		int[]Y= {4,10,6};
+		
+		// up3 슈팅게임
+		int monsterX=10;
+		int monsterY=20;
+		int monsterWidth=5;
+		int monsterHeight=6;
+		
+		int missileX=11;
+		int missileY=18;
+		int missileSize=2;
+		
+		//미사일 y좌표 조정
+		int missileY2=missileY+2;
+		System.out.println(missileY2);
+		
+		//미사일의 X 좌표가 곁치는지 판별
+		//미사일의 X 좌표 (missileX)와 몬스트와 닿는 지점(조정필요 왼쪽으로는 미사일 사이즈만큼 줄이고 . 오른쪽으로는 몬스터 가로 사이즈와 미사일 사이즈 만큼 조정)
+		System.out.println(((monsterX-missileSize)<=missileX) && ((monsterX+monsterWidth+missileSize)>=missileX));
+		
+		//미사일의 Y 좌표가 곁치는지 판별
+		//미사일의 Y 좌표를 정정할 필요 있음. 미사일은 직진이므로 미사일의 윗 부분에 맞는다. 그래서 missilY2로 조정
+		System.out.println((monsterY <= missileY2) && (monsterY+monsterHeight >= missileY2));
+		
+		// 최종 판단
+		System.out.println((((monsterX-missileSize)<=missileX) && ((monsterX+monsterWidth+missileSize)>=missileX)) &&
+				  			((monsterY <= missileY2) && (monsterY+monsterHeight >= missileY2)));
+
+
+	
 		}
 	}
 

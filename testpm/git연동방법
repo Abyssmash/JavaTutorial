@@ -1,0 +1,137 @@
+human-teacher@DESKTOP-4J9B8HB MINGW64 ~
+$ pwd
+/c/Users/human-teacher
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 ~
+$ cd d:
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d
+$ pwd
+/d
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d
+$ cd data
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data
+$ pwd
+/d/data
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data
+$ cd 20240805_tr
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr
+$ pwd
+/d/data/20240805_tr
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr
+$ cd java_src
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src
+$ pwd
+/d/data/20240805_tr/java_src
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src
+$ cd JavaStudy
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy
+$ pwd
+/d/data/20240805_tr/java_src/JavaStudy
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy
+$ git init
+Initialized empty Git repository in D:/Data/20240805_tr/java_src/JavaStudy/.git/
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .classpath
+        .project
+        .settings/
+        bin/
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git config --global user.name "kimtr"
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git confg --global user.email "nagneoo@naver.com"
+git: 'confg' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git config --global user.email "nagneoo@naver.com"
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git remote
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git remote add origin https://github.com/SilverSooKim/JavaStudy.git
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git remote
+origin
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git remote -v
+origin  https://github.com/SilverSooKim/JavaStudy.git (fetch)
+origin  https://github.com/SilverSooKim/JavaStudy.git (push)
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git add *
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   bin/a_variable/Test01.class
+        new file:   bin/a_variable/Test02.class
+        new file:   src/a_variable/Test01.java
+        new file:   src/a_variable/Test02.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .classpath
+        .project
+        .settings/
+
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git commit -m '변수와 연산자'
+[master (root-commit) 36ba560] 변수와 연산자
+ 4 files changed, 91 insertions(+)
+ create mode 100644 bin/a_variable/Test01.class
+ create mode 100644 bin/a_variable/Test02.class
+ create mode 100644 src/a_variable/Test01.java
+ create mode 100644 src/a_variable/Test02.java
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ git push -u origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 3.30 KiB | 1.65 MiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/SilverSooKim/JavaStudy.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$ ^C
+
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/20240805_tr/java_src/JavaStudy (master)
+$

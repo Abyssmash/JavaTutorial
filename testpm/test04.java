@@ -123,9 +123,9 @@ public class test04 {
 		  int bint=0;
 		  for(int i=1; i<20;) {   // 증감식 부분은 생략 가능
 			  System.out.println(i);
-			  int temp=i;
-			  i=bint+i;
-			  bint=temp;
+			  int temp=i;			// 현재 i값 백업
+			  i=bint+i;				// 다음 i  값
+			  bint=temp;			// 이전 bint에 현재 i값 저장
 		  }
 		   
 		// 10. 987654321이라는 숫자가 있다.. 변수2개와 for문 한개로
@@ -133,6 +133,13 @@ public class test04 {
 		//  합만 출력하면 됩니다.
 		//  main 메서드 안의 라인수를 최소화 하여서 작성하세요. 최소 라인수로 작성하라는 의미입니다. 
 
+		 int a=987654321;
+		 int sum=0;
+		 for(int i=9;a>0;i--) { 
+			 sum+=sum%10;
+			 a/=10;
+			 System.out.println(sum);
+		 }
 		 
 
 

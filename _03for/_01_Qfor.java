@@ -18,7 +18,7 @@ public class _01_Qfor {
 			}
 		}
 		System.out.println(add);
-
+		
 		// 2. 
 		add=0;
 		int cnt=0;
@@ -32,20 +32,53 @@ public class _01_Qfor {
 		avg = add/(double)cnt;
 		System.out.println(avg);
 		
+		//2-1 (다른 방법)
+				cnt=0;
+				int sum=0;
+				for(int i=0; i<5; i++) {
+					if(a[i]>=50) {
+						cnt++;
+						sum += a[i];
+					}
+				}
+				System.out.println((double)sum/cnt);
+
 		
-		// 3. 총합 구한 후 최솟값
-		// 코드 줄이기
-		int sum2=0;
-		int cnt2=0;
-		int minValue1=99999;
+		// 3
+		int sum1=0;
+		int cnt1=0;
+		int minValue=99999;
 		
-		//if문은 최솟값 구하기, sum2는 모두 합하기
+		//최저값 찾기
 		for (int i = 0; i < 5; i++) {
-			if (a[i] < minValue1) {
-				minValue1 = a[i];
+			if (a[i] < minValue) {
+				minValue = a[i];
 			}
-			sum2+=a[i];
 		}
-		System.out.println((double)(sum2-minValue1)/4);
+		//누적합 구하기
+		for (int i = 0; i < 5; i++) {
+			if (a[i] != minValue) {
+				sum1 += a[i];
+				cnt1++;
+			}
+		}
+		System.out.println((double) sum1 / cnt1);
+		
+		// 3번 코드 줄이기
+		//sample3 :sample2를 코드 줄이기
+				//총합을 일단 구한 후. 나중에 최저값을 뺀다.
+				int sum2=0;
+				int cnt2=0;
+				int minValue1=99999;
+				
+				//if문은 최저값 구하기, sum2는 모두 합하기
+				for (int i = 0; i < 5; i++) {
+					if (a[i] < minValue1) {
+						minValue1 = a[i];
+					}
+					sum2+=a[i];
+				}
+				System.out.println((double)(sum2-minValue1)/4);
+		
 	}
 }

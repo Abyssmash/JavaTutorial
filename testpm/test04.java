@@ -120,7 +120,13 @@ public class test04 {
 		//  i를 피보나치 수로 정의한다.
 		//  i의 변화는 1 1 2 3 5 8 13 이 된다.
 		// for(int i=1;i < 20; ){  
-		   
+		  int bint=0;
+		  for(int i=1; i<20;) {   // 증감식 부분은 생략 가능
+			  System.out.println(i);
+			  int temp=i;
+			  i=bint+i;
+			  bint=temp;
+		  }
 		   
 		// 10. 987654321이라는 숫자가 있다.. 변수2개와 for문 한개로
 		//  모든 자릿수를 더한 합을 구하시오.. 9+8+7+6+5+4+3+2+1 = 합

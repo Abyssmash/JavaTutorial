@@ -129,10 +129,10 @@ public class test05 {
 	    //위 코드를 분석하여 a문자열에 a가 몇개 있는지 구하는 프로그램을 작성하세요
 		// (1) 문자열의 문자를 가져온다. 문자를 첫번째부터 하나씩 가져온다.
 		
-		// String test="abcdeabce";
-		// for(int i=0; i<9; i++) {
-		// 	char aaa=test.charAt(i); // char 문자열을 하나씩 가져오는 기능
-		// 	System.out.println(aaa);
+		String test="abcdeabce";
+		for(int i=0; i<9; i++) {
+			char aaa=test.charAt(i); // char 문자열을 하나씩 가져오는 기능
+			System.out.println(aaa);
 		}
 		
 		// 14. 가장 긴 터널의 알파벳 이름과 숫자를 찾으세요
@@ -159,7 +159,9 @@ public class test05 {
 					maxNumber=bT;
 				}
 			}
+			resultZip = resultZip + (char)bT + cnt;
 			System.out.println(resultZip);   // 15번 문제 확인
 			System.out.println(maxCnt +"/"+(char)bT);  // 14번 문제 확인
 		}
 	}
+

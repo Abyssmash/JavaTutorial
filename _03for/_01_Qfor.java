@@ -17,6 +17,9 @@ public class _01_Qfor {
 				add+=a[i];
 			}
 		}
+		
+		
+		
 		System.out.println(add);
 		
 		// 2. 

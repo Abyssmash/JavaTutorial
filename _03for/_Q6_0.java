@@ -14,5 +14,4 @@ public class _Q6_0 {
 			}
 		}
 	}
-
 }

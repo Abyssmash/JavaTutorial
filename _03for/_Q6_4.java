@@ -14,21 +14,22 @@ public class _Q6_4 {
 		
 		// (1) 0이 연속적으로 2개 나와야함. 그러면 총 7개
 		// (2) 0이 연속적으로 2개 나오지 않으면 순회
-		int bt=0;
-		int size=2; 
-		int cnt=0;
+		// (3) 사이즈 2가 맞지 않으면이라는 관점으로 가는게 좋음.
 		int[] arr = {1,0,0,0,1,1,1,0,0,0,0,1,1,1,1,0,0,0,1};
+		int size = 2;
+		int cnt = 0;
+		int building = 0;
 		for (int i=0; i<arr.length; i++) {
-			if(arr[i]==0) {
+			if (arr[i] == 0) {
 				cnt++;
-			}else {
-				cnt=1;
-			}
-			if(cnt!=0) {
-				cnt++;
-				cnt+=bt;
+				if (cnt == size) {
+					building++;
+					cnt = size - 1;
+				}
+			} else {
+				cnt = 0;
 			}
 		}
-		System.out.println(bt);
+		System.out.println(building);
 	}
 }

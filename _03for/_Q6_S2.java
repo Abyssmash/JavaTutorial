@@ -10,25 +10,30 @@ public class _Q6_S2 {
 		//charAt() 메서드만 사용이 가능하다.
 		//형변환이 필요하면 검색하여 사용하시오.
 		// / 아스키코드: 79
+		
+		// 독해
+		//(1) 문자열을 숫자로 바꿔준다. String에서 int로 형변환
+		//(2) for문 (초기값) 설정하기 int=0 i<a.length i++
+		//(3) 아스키 코드로 변환되기 때문에 /는 out시키는 작업
+		
+		// 풀이: 모든 문자열을 숫자로 바꿔준 후 숫자로 바뀐 /를 빼주는 작업을 하였는데
+		// 처음에 숫자인 아스키코드 제외 시키고 '+' 대입하고 결과값을 대입하여 도출하는 것이었는데
+		// 올려주신 코드가 더 간결함
 		String a ="67/414/1/23/32/45/54/12/11/232";
-		int result=0;
-		String text="";
-		String str="67/414/1/23/32/45/54/12/11/232";
-		char arithmetic = ' ';
-		int num= Integer.parseInt(str);		// 문자열을 숫자로 변경
-		for(int i=0; i<a.length(); i++) {
-			if ((int)a.charAt(i) > 47) {
+		String text = "";
+		int num = 0;
+		for (int i = 0; i < a.length(); i++) {
+			if (a.charAt(i) != '/') {
 				text += a.charAt(i);
-			}else if (result == 0) {	
-					result += Integer.parseInt(text);
-					text = "";
-			}else if (arithmetic == '+') {			
-					result += Integer.parseInt(text);
-					text = " ";
-			}if((int)a.charAt(i)==num) {
-				result++;
+				if (i == a.length() - 1) {
+					num += Integer.parseInt(text);
+				}
+			} else {
+				num += Integer.parseInt(text);
+				text = "";
 			}
 		}
-		System.out.println(result);
+		System.out.println(num);
 	}
+
 }

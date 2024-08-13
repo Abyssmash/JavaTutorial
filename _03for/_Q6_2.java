@@ -20,7 +20,7 @@ public class _Q6_2 {
 				i+=0;
 			}
 			if(sum>max) {
-				max=letter[i];
+				max+=i;
 			}
 		}
 		System.out.println(max);

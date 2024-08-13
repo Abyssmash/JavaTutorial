@@ -23,20 +23,17 @@ public class _Q6_S1 {
 		// (1) 배열
 		// (2) 숫자가 같으면 +1씩 늘어나게 한다.
 		// (3) 숫자와+갯수를 같이 출력되게 한다.
-		int[] a = {6,4,3,2,5,1,4,5,6,7,8,9,1,2,3,4,5,6};
-		int cnt=0;
-		int same=a[i];
-		int resultZip=0;
-		for(int i=0; i<a.length; i++) {
-			if(same==a[i]) {
-				cnt++;
-			}else {
-				resultZip = resultZip + same + cnt;
-				same=a[i];
-				cnt=1;
+		
+		String a = "6/4/3/2/5/1/4/5/6/7/8/9/1/2/3/4/5/6";
+		int[] aa = new int[10]; 
+		for(int i=0; i< a.length(); i++) {
+			char temp = a.charAt(i);
+			if(temp != '/') {
+				aa[temp-48]++;
 			}
 		}
-		resultZip = resultZip + same + cnt;
-		System.out.println(resultZip);
+		for(int i=0; i< aa.length; i++) {
+			System.out.println(i+"숫자 : "+aa[i]);
+		}
 	}
 }

@@ -19,7 +19,7 @@ public class _Q7_6 {
 		}
 		for(int num=0; i<=45; i++) {
 			if(lotto[i]>max) {
-				max++;
+				;
 			}
 		}
 		System.out.println(max);	

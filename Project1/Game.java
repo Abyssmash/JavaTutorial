@@ -2,6 +2,9 @@ package Project1;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class Game {
 	public static volatile boolean stop = false;
@@ -13,10 +16,24 @@ public class Game {
     public static final String purple   = "\u001B[35m" ;
     public static final String cyan     = "\u001B[36m" ;
     public static final String white    = "\u001B[37m" ;
-    public static final String exit     = "\u001B[0m" ;
-
+    public static final String exit     = "\u001B[0m"  ;
+    public static int timeout = 100;
 	
-	public static void game(Arr a, Random r, Scanner in, int point, int[] cnt, int bomb) {
+	public static void game(Arr a, Random r, Scanner in, int point, int[] cnt, int bomb,int select, Timer timer) {
+		TimerTask timertask = new TimerTask() {
+			public void run() {
+				timeout--;
+				if (timeout % 10 == 0) {		 //10초단위로 출력
+					System.out.println();
+					System.out.println(red+timeout+"초 남았습니다."+exit);
+				} else if(timeout <= 0) {
+					System.out.println(red+"타임오버입니다."+exit);
+					timer.cancel();
+				}
+				
+			}
+		};
+		timer.schedule(timertask, 0, 1000);  
 		for(int i=r.nextInt(a.arr.length);;) {
 			bomb=r.nextInt(10)+1;
 			if(cnt[a.arr[i].length()-1]!=0) {
@@ -24,11 +41,13 @@ public class Game {
 					System.out.println("💣💣💣"+cyan+"폭탄 단어입니다!"+exit);
 					System.out.println(red+" 틀리면 점수 두배감점!"+exit);
 				}
+				System.out.println();
 				System.out.println("주어진 단어를 입력하세요.");
 				System.out.println(a.arr[i]);
 				String word=in.next();
 				in.nextLine();
 				if(a.arr[i].equals(word)) {
+					System.out.println("현재점수는: "+point+"입니다.");
 					System.out.println(blue+"৻(≧ᗜ≦৻) 정답입니다 ৻(≧ᗜ≦৻)"+exit);
 					for (int j = 0; j < cnt.length; j++) {
 						if(a.arr[i].length()-1==j) {
@@ -56,8 +75,17 @@ public class Game {
 				i = r.nextInt(a.arr.length);
 			}
 			if(cnt[0]+cnt[1]+cnt[2]+cnt[3]+cnt[4]==0) {
-				System.out.println("ദ്ദി ( ᵔ ᗜ ᵔ )");
-				System.out.println("초보단계를 통과하였습니다!!!(점수는"+point+"입니다.)");
+				System.out.println(yellow+"ദ്ദി ( ᵔ ᗜ ᵔ )"+exit);
+				if (select == 1) {
+					System.out.println("🎉🎉초보를 통과하였습니다!!!(점수는"+point+"입니다.)");
+				}
+				if (select == 2) {
+					System.out.println("🎉🎉중급을 통과하였습니다!!!(점수는"+point+"입니다.)");
+				}
+				if (select == 3) {
+					System.out.println("🎉🎉마스터를 통과하였습니다!!!(점수는"+point+"입니다.)");
+				}
+				timer.cancel();			// 통과하면 타이머 작동 중지
 				break;
 			}
 			if(point<=0) {
@@ -65,7 +93,11 @@ public class Game {
 				System.out.println(green+"더 연습하세요!!!"+exit); 
 				break;
 			}
-			System.out.println();
+			if (timeout <= 0) {
+				break;
+			}
+//			System.out.println();
+			
 		}
 	}
 }

@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Level {
 
-	public static void level(Scanner in, int[] cnt) {
-		int select = in.nextInt();
-		in.nextLine();
+	public static void level(Scanner in, int[] cnt, int select ) {
 		if (select == 1) {
 			for (int i = 0; i < cnt.length; i++) {
 				cnt[i]=5-i;

@@ -11,9 +11,9 @@ public class _Q8_2 {
 				 {21,22,23,24,25}};
 		
 		// 2. 2차원 배열 a의 3번째 행에서 짝수의 값만 출력하시오.
-		for(int a=0; a < 5 ; i++) {		// i 5행
+		for(int i=0; i < 5 ; i++) {		
 			for(int j=0; j < 5; j++)
-				if(a[2]%2==0) {
+				if(i[2]%2==0) {
 					System.out.println();
 		}
 	}

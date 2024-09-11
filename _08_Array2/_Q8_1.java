@@ -18,15 +18,11 @@ public class _Q8_1 {
 		
 		// 1. 2차원 배열 a의 2번째 행의 모든 값을 출력하시오.
 		for(int i=0; i < 5 ; i++) {		// i 5행
-			for(int j=0; j < 5; j++) {	// j 5열
-				if(j==1) {
-					System.out.println();
+					System.out.println(a[1][i]+"");
 				}
 			}
-		}
+}
 		
 		
 		//+ 모든 행의 값 출력하기
 		//System.out.println(Arrays.deepToString(a));	
-		}
-	}

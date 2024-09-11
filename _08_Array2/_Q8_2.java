@@ -12,10 +12,9 @@ public class _Q8_2 {
 		
 		// 2. 2차원 배열 a의 3번째 행에서 짝수의 값만 출력하시오.
 		for(int i=0; i < 5 ; i++) {		
-			for(int j=0; j < 5; j++)
-				if(i[2]%2==0) {
-					System.out.println();
+				if(a[2][i]%2==0) {
+					System.out.println(a[2][i]);
+				}
 		}
-	}
 	}
 }

@@ -19,7 +19,7 @@ public class _Q8_6 {
 			for(int j=col; j >= 0; j--) {
 				System.out.println(a[i][j]+"\t");
 			}
-			System.out.println();
+			System.out.println();			// 줄 바꿈
 		}
 	}
 

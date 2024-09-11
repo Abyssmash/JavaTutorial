@@ -12,6 +12,7 @@ public class _Q8_9 {
 		// 9. 키보드로 좌표를 입력하면, 좌표기준으로 왼쪽 또는 오른쪽으로 3개 이상의 연속된 숫자가 있으면 제거 가능
 		// 제거 가능이면 제거를 하고, 위에 있는 숫자가 아래로 내려온다.
 		// 맨위에 배열은 랜덤수로 채워진다.
+		
 		Scanner in = new Scanner(System.in);
 		Random r = new Random();
 		int[][] pang= {{1,1,0,2},
@@ -19,9 +20,13 @@ public class _Q8_9 {
 					   {0,0,3,2},
 					   {4,4,4,4},
 					   {2,4,3,1},
+					   
+					   
 					   {2,4,1,3}};
-		int maxRow=pang.length;
-		int maxCol=pang[0].length;
+		int maxRow=pang.length;		// 배열의 행의 길이
+		int maxCol=pang[0].length;  // 배열의 열의 길이
+									// 이렇게 하면 배열을 한번만 참고하여 변수에 저장함
+									// 변수를 재사용하여 배열의 참고 연산을 줄일 수 있음 > 속도 향상
 		
 		while(true) {
 			// 배열 출력
@@ -42,10 +47,10 @@ public class _Q8_9 {
 			in.nextLine();
 			
 			// 필요 변수 초기값 설정
-			int number=pang[row][col];
-			int numberLength=0;
-			int numberLeftCol=col;
-			int numberRightCol=col;
+			int number=pang[row][col];		// 현재 캐릭터의 번호
+			int numberLength=0;				// 연속 캐릭터의 수
+			int numberLeftCol=col;			// 캐릭터의 왼쪽 시작 번호
+			int numberRightCol=col;			// 캐릭터의 오른쪽 시작 번호
 			
 			// 왼쪽 방향으로 탐색
 			for(int i = col; i >= 0; i--) {

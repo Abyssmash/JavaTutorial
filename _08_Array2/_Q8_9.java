@@ -13,29 +13,26 @@ public class _Q8_9 {
 		// 제거 가능이면 제거를 하고, 위에 있는 숫자가 아래로 내려온다.
 		// 맨위에 배열은 랜덤수로 채워진다.
 		
-		Scanner in = new Scanner(System.in);
-		Random r = new Random();
-		int[][] pang= {{1,1,0,2},
-					   {3,2,1,2},
-					   {0,0,3,2},
-					   {4,4,4,4},
-					   {2,4,3,
-						   1},
-					   
-					   
-					   {2,4,1,3}};
-		int maxRow=pang.length;		// 배열의 행의 길이
-		int maxCol=pang[0].length;  // 배열의 열의 길이
-									// 이렇게 하면 배열을 한번만 참고하여 변수에 저장함
-									// 변수를 재사용하여 배열의 참고 연산을 줄일 수 있음 > 속도 향상
-		
-		while(true) {
-			// 배열 출력
-			System.out.println("팡팡팡 Game ~ ");
-			for(int i = 0; i < maxRow; i++) {
-					System.out.print(i+"번 행 : ");
-					for(int j=0; j < maxCol; j++) {
-							System.out.print(pang[i][j]+" ");
+			Scanner in = new Scanner(System.in);
+			Random r = new Random();
+			int[][] pang= {{1,1,0,2},
+						   {3,2,1,2},
+						   {0,0,3,2},
+						   {4,4,4,4},
+						   {2,4,3,1},
+						   {2,4,1,3}};
+			int maxRow=pang.length;		// 배열의 행의 길이
+			int maxCol=pang[0].length;  // 배열의 열의 길이
+										// 이렇게 하면 배열을 한번만 참고하여 변수에 저장함
+										// 변수를 재사용하여 배열의 참고 연산을 줄일 수 있음 > 속도 향상
+			
+			while(true) {
+				// 배열 출력
+				System.out.println("팡팡팡 Game ~ ");
+				for(int i = 0; i < maxRow; i++) {
+						System.out.print(i+"번 행 : ");
+						for(int j=0; j < maxCol; j++) {
+								System.out.print(pang[i][j]+" ");
 				}
 				System.out.println();
 			}

@@ -5,9 +5,9 @@ public class _Q9_2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[][] a= new int[4][5];
-		int num=1;
 		
 		// 기본값
+		//int num=1;
 		//for(int i=0; i < a.length; i++) {
 		//	for(int j=0; j < a[0].length; j++) {
 		//		a[i][j]=num;
@@ -15,7 +15,15 @@ public class _Q9_2 {
 		//	}
 		//}
 		
-		// 배열 값 입력부 : 코드 수정
+
+		/*	문제
+		 * 	{17, 13, 9, 5, 1},
+		 *  {18, 14, 10, 6, 2},
+		 *  {19, 15, 11, 7, 3},
+		 *  {20, 16, 12, 8, 4} 
+		 */
+		
+	
 		// 문제 풀이
 		// 3행의 4열부터 반대로 1~20
 		// [0][4] 1 [1][4] 2 [2][4] 3 [3][4] 4
@@ -39,7 +47,6 @@ public class _Q9_2 {
 		int col=a[0].length;			// col은 a의 열의 길이이다. 
 		for(int i=row; i >= 0; i++) {		// i는 행이고, 행이 0과 같거나 크다면 1씩 증가
 			for(int j=col; j >= 0; j--) {   // J는 열이고, j가 0보다 크면 1씩 감소
-				num--;
 				if(j==col) {
 					row--;
 				}

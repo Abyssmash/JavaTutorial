@@ -32,7 +32,7 @@ public class _Q9_7 {
 				System.out.println(a[i][j]+" ");
 			}
 			System.out.println();g
-			dd
+			ddddddddddddd
 		}
 
 	}

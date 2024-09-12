@@ -30,11 +30,19 @@ public class _Q9_2 {
 		//	}
 		//}
 		
+		//필요한 변수
+		// 행의 길이
+		// 열의 길이
+		// 
+		
 		int row=a.length;				// row는 a의 행의 길이이다.
 		int col=a[0].length;			// col은 a의 열의 길이이다. 
 		for(int i=row; i >= 0; i++) {		// i는 행이고, 행이 0과 같거나 크다면 1씩 증가
 			for(int j=col; j >= 0; j--) {   // J는 열이고, j가 0보다 크면 1씩 감소
-				num++;
+				num--;
+				if(j==col) {
+					row--;
+				}
 				System.out.println(a[i][j]+"\t");
 					}		
 			System.out.println();

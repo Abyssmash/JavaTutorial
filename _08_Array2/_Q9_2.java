@@ -15,12 +15,12 @@ public class _Q9_2 {
 		}
 		// 문제 풀이
 		// 3행의 4열부터 반대로 1~20
-		int cnt=0;
+		
 		for(int i=0; i < a.length; i++) {
 			for(int j=0; j < a[0].length; j++) {
 				if(a[i][j]>0) {
-					cnt--;
-				}
+					
+				 	}
 				}
 			}
 		

@@ -6,23 +6,49 @@ public class _Q9_2 {
 		// TODO Auto-generated method stub
 		int[][] a= new int[4][5];
 		int num=1;
+		
+		// 기본값
+		//for(int i=0; i < a.length; i++) {
+		//	for(int j=0; j < a[0].length; j++) {
+		//		a[i][j]=num;
+		//		num++;
+		//	}
+		//}
+		
 		// 배열 값 입력부 : 코드 수정
-		for(int i=0; i < a.length; i++) {
-			for(int j=0; j < a[0].length; j++) {
-				a[i][j]=num;
-				num++;
-			}
-		}
 		// 문제 풀이
 		// 3행의 4열부터 반대로 1~20
+		// [0][4] 1 [1][4] 2 [2][4] 3 [3][4] 4
+		// [0][3] 5 [1][3] 6 [2][3] 7 [3][3] 8
+		// 행이 0일때 1씩 증가
+		// 열이 4일때 행이 1씩 증가
 		
-		for(int i=0; i < a.length; i++) {
-			for(int j=0; j < a[0].length; j++) {
-				if(a[i][j]>0) {
-					
-				 	}
-				}
-			}
+		//for(int i=4; i < a.length; i++) {
+		//	for(int j=5; j < a[0].length; j++) {
+		//		a[i][j]=num;
+		//		num++;
+		//	}
+		//}
+		
+		int row=a.length;				// row는 a의 행의 길이이다.
+		int col=a[0].length;			// col은 a의 열의 길이이다. 
+		for(int i=row; i >= 0; i++) {		// i는 행이고, 행이 0과 같거나 크다면 1씩 증가
+			for(int j=col; j >= 0; j--) {   // J는 열이고, j가 0보다 크면 1씩 감소
+				num++;
+				System.out.println(a[i][j]+"\t");
+					}		
+			System.out.println();
+		}
+
+		
+		// or 행의 열이 1씩 증가할때 열의 숫자가 4씩 증가
+		//int row=a.length;
+		//int col=a[0].length;
+		//for(int i=0; i < row; i++) {
+		//	for(int j=0; j < col; j++) {
+		//		}
+		//	}
+		//}
 		
 		
 		// 배열 값 출력부

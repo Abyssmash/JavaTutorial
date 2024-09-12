@@ -31,8 +31,7 @@ public class _Q9_7 {
 			for(int j=0; j<a[0].length; j++) {
 				System.out.println(a[i][j]+" ");
 			}
-			System.out.println();g
-			ddddddddddddd
+			System.out.println();
 		}
 
 	}

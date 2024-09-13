@@ -26,7 +26,8 @@ public class _Q9_3 {
 				num++;
 			}
 		}
-			
+		
+		
 		
 		// 내가 작성한 코드
 		//int row=a.length-1;

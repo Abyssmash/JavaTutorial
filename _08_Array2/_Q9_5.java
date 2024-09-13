@@ -32,9 +32,9 @@ public class _Q9_5 {
 		// 2차원 배열 a의 값을 0번행부터 모두 출
 				for(int i = 0; i<4; i++) {
 					for(int j=0; j<5; j++) {
-						System.out.println(a[i][j]+"\t");
+						System.out.print(a[i][j]+"\t");		// ln 삭제하면 출력이 가로로 정렬됨 +
 					}
-					System.out.println();
+					System.out.println();		// 줄 바꿈
 				}
 			}
 

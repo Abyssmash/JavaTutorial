@@ -32,6 +32,7 @@ public class _Q9_2 {
 				a[i][j]=num;
 				num++;
 			}
+
 		}
 		
 		for(int i=0; i < 4; i++) {

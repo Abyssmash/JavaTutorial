@@ -5,7 +5,8 @@ public class _Q9_4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[][] a= new int [4][5];
-		int num=1;		
+		int num=1;
+		
 		
 		/* 문제
 		 * {1, 2, 3, 4, 5},

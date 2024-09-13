@@ -37,7 +37,7 @@ public class _Q9_6 {
 			for(int i=minR; i <= maxR; i++) {
 				a[i][maxC]=num++;
 			}
-			maxC++;
+			maxC--;
 			for(int i=maxC; i >= minC; i--) {
 				a[maxR][i]=num++;
 			}

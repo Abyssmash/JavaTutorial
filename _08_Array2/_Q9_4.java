@@ -6,6 +6,7 @@ public class _Q9_4 {
 		// TODO Auto-generated method stub
 		int[][] a= new int [4][5];
 		int num=1;
+
 		
 		
 		/* 문제
@@ -54,7 +55,7 @@ public class _Q9_4 {
 		// 배열 값 출력부
 		for(int i = 0; i<a.length; i++) {
 			for(int j=0; j<a[0].length; j++) {
-				System.out.println(a[i][j]+"\t");
+				System.out.print(a[i][j]+"\t");
 			}
 			System.out.println();
 		}

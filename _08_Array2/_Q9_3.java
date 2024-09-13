@@ -27,25 +27,10 @@ public class _Q9_3 {
 			}
 		}
 		
-		
-		
-		// 내가 작성한 코드
-		//int row=a.length-1;
-		//int col=a[0].length-1;
-		//int num=20;
-		//for(int i=row; i >=0; i-- ) {
-		//	for(int j=col; j >=0; j--) {
-		//		a[i][j]=num;
-		//		num--;
-		//		System.out.println(a[i][j]);
-		//	}
-		//	System.out.println();
-		//}
-		
 		// 배열 값 출력부
 		for(int i = 0; i<4; i++) {
 			for(int j=0; j<5; j++) {
-				System.out.println(a[i][j]+"\t");
+				System.out.print(a[i][j]+"\t");
 			}
 			System.out.println();
 		}

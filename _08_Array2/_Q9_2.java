@@ -26,24 +26,24 @@ public class _Q9_2 {
 		int num=1;
 		
 		// 2차원 배열의 값을 저장하는 코드
+		for(int i=0; i < 4; i++) {
+			// System.out.println(">행"+행);
+			for(int j=0; j < 5; j++) {
+				System.out.print(a[i][j]+"\t");
+				}
+				System.out.println();
+				System.out.println();
+			}
+		
 		for(int i=4; i>=0; i++) {
 			//System.out.println("현재 행은");
 			for(int j=0; j<4; j++) {
 				a[i][j]=num;
 				num++;
 			}
-
+			System.out.println();
 		}
-		
-		for(int i=0; i < 4; i++) {
-			// System.out.println(">행"+행);
-			for(int j=0; j < 5; j++) {
-				System.out.print(a[i][j]+"\t");
-			}
-			System.out.println();
-			System.out.println();
-			}
 	
-		}
 	}
+}
 

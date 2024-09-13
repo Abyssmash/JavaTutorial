@@ -35,6 +35,7 @@ public class _Q9_2 {
 				System.out.println();
 			}
 		
+		// 2차원 배열 a의 값을 0번행부터 모두 출력
 		for(int i=4; i>=0; i++) {
 			//System.out.println("현재 행은");
 			for(int j=0; j<4; j++) {

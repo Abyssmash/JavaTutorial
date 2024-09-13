@@ -27,7 +27,7 @@ public class _Q9_3 {
 			}
 		}
 		
-		// 배열 값 출력부
+		// 2차원 배열 a의 값을 0번행부터 모두 출력
 		for(int i = 0; i<4; i++) {
 			for(int j=0; j<5; j++) {
 				System.out.print(a[i][j]+"\t");

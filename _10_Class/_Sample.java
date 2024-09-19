@@ -24,5 +24,4 @@ public class _Sample {
 		System.out.println(r3.nextInt(4));
 		
 	}
-
 }

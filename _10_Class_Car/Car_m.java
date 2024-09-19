@@ -64,7 +64,7 @@ public class Car_m {
 			}
 		}
 		public void del() {
-			System.out.println("삭제: 삭제할 번호를 입력하세요");
+			System.out.println("삭제: 삭제할 차량번호를 입력하세요");
 			int dnum= in.nextInt();
 			in.nextLine();
 			for(int i=0; i < Clist.length; i++) {

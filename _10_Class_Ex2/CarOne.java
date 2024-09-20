@@ -9,4 +9,8 @@ public class CarOne {
 	public CarOne() {
 		
 	}
+	public void prt() {
+		System.out.println(carNumber);
+		System.out.println(carUser);
+	}
 }

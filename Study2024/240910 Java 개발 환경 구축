@@ -1,0 +1,161 @@
+9/10 Java
+
+개발환경
+IDE tools(통합 개발 툴) 
+: Eclipse(개발 언어: Java), vs code(개발 언어: html, Javascript), 인텔리J (대학생은 무료..key받기, 서비스가 좋음: 자동성),
+Spring 
+
+JDK version: 1.8
+
+<JRE+JDK=JDK>
+JRE (Java Run Time) : 소스 실행 (ex) ctrl+f11 : JRE가 없으면 실행이 안된다. )
+- CPU에게 작업을 지시한다.
+JDK : 개발에 필요한 도구 (ex) import)
+- 개발에 필요한 라이브러리를 가지고 있다.
+: Scanner, Random
+
+이클립스
+1. Workspace 위치 찾기
+2. 프로젝트 생성 
+type: Javaproject
+이름: JavaTu2
+JDK: 1.8
+3. src(소스)-package로 관리
+
+
+Git
+*local(src), remote(git), ls(파일 위치 확인)
+1. Workspace 설정
+2. 위를 이어 저장할 workspace로 연결
+3. 유저 이름과 이메일 등록 후 remote ( 로그인 )
+4. remote add repository 주소 (저장, 연동할 깃 주소)
+5. git branch -m master main (마스터로 설정되어 있는 브랜치를 메인으로 만들어준다. //내가 깃허브 레포지터리에서 설정한)
+
+<재정리>
+git
+우리가 공부한 것은  
+브랜치의 의미와 전략 (브랜치는 main )
+버전관리 의미 (commit의 숫자가 높을 수록 최신 버전)
+
+정리
+리모트 리포지토리 : git hub 도구
+로컬 리포지토리 : git
+   > git과 github의 차이를 설명하시오.. 면접질문도 가끔나와요..당신 따라치기 입니까? 이런뜻
+
+리모트 리포지토리..
+  주요단어 > 회사 입장에서. 좀 더 구체적으로 말하면 프로젝트 관리 입장
+                브랜치는  개발완료, 개발중, 이벤트성코드 이런 식으로 회사에서 프로젝트 전략임
+로컬 리포지토리는  개발자 개인의 입장이라보 보면 된다.
+  개발자는 주어진 미션을 수행하기 위해서 미션별로 브랜치를 생성하고
+개발하고 푸쉬하고 최종 완료되면 해당 브랜치를 삭제하기도 한다.
+
+지금 우리가 사용하는 브랜치기능은  자바 소스 파일 정리 프로젝트이고. 브랜치 전략은 없다. 
+로컬리포지토리에서는 add   commit   push 순으로 리모트에 업로드 한다.   
+
+<깃 실습 명령어>
+human-teacher@DESKTOP-4J9B8HB MINGW64 ~
+$ pwd                                 현재 위치 확인
+/c/Users/human-teacher
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 ~
+$ cd d:  드라이드 이동
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d
+$ cd data  폴더이동
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data
+$ ls  폴더 내의 정보(폴더와 파일) 확인
+ 220727/                  230828_자료실--/   Eclipse_web/   wordata/
+'220727 과정형 교사용'/   240129/            KinfolkSoft/   zzz_src/
+ 230125/                  240129_tr/         bak/           과정운영/
+'230125 교사용'/          240129교사용/      data/          교사김은수/
+ 230125_Study/            240805/            mySrc/         바탕화면0622/
+ 230828/                  240805_tr/         src/
+ 230828_교사/             240805_교사용/     tmp/
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data
+$ cd s40805_tr  폴더 이동인데 이런 폴더가 없다고 에러남
+bash: cd: s40805_tr: No such file or directory
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data
+$ cd 240805_tr  폴더 이동 에러가 없으니 성공이네
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr
+$ ls   현재 폴대 내의 정보 확인.. 2개의 디렉토리가 있네.. 
+DB_tools/  java_src/
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr
+$ cd java_src  디렉토리 이동, 위에서는 폴더라고 하고 갑자기 디렉토리
+                 같은 말이다. 
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src
+$ ls   폴대 내의 내용확인
+JavaStudy/  JavaTu2/  JavaTutorial/  aaaa/
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src
+$ cd JavaTu2  폴더 이동
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2
+$ ls    폴더 내의 정보 확인
+bin/  src/
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2
+$ cd src  폴더 이동
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src
+$ pwd    폴더 위치 확인..ㅇ ㅕ기가 깃 형상관리 할 위치이군.. 좋아
+/d/data/240805_tr/java_src/JavaTu2/src
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src
+$ git init   로컬 리포지 토리 만들자.. 이러면 git폴더가 숨김폴더로 만들어 짐
+Initialized empty Git repository in D:/Data/240805_tr/java_src/JavaTu2/src/.git/
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git config --global user.name "kimtr"   // 로컬 리포지토리 환경설정
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git config --global user.email "nagneoo@naver.com"  // 환경설정
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git remote   // 원격 리포지토로 있는가>? 확인 없네
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git remote add orgin https://github.com/KimTrLab/JavaTutorial.git
+       // 원결 리포지토리 추가하자 이름은  orgin  이런 오타. 
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git remote  // 원격 리포지토리.. 확인 해보니 방금것이 등록 됨
+orgin
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git fetch    // 원격 레포지토리에 다운로드 될 파일이 있는지 확인용. 
+                 // 뭔가 있네.. 아 .. 일이 있구나. 
+remote: Enumerating objects: 290, done.
+remote: Counting objects: 100% (56/56), done.
+remote: Compressing objects: 100% (41/41), done.
+remote: Total 290 (delta 20), reused 48 (delta 13), pack-reused 234 (from 1)
+Receiving objects: 100% (290/290), 612.72 KiB | 14.59 MiB/s, done.
+Resolving deltas: 100% (97/97), done.
+From https://github.com/KimTrLab/JavaTutorial
+ * [new branch]      main       -> orgin/main
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git pull orgin main    // orgin리모트의 main브랜치를 pull받아옴
+From https://github.com/KimTrLab/JavaTutorial
+ * branch            main       -> FETCH_HEAD
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git branch main    // main브랜치 만듬. 어디에서? 로컬에서 리모트는 모르지
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (master)
+$ git checkout main  // 브랜치 이동..
+Switched to branch 'main'
+
+human-teacher@DESKTOP-4J9B8HB MINGW64 /d/data/240805_tr/java_src/JavaTu2/src (main)
+$
+
+마스터 브랜치여도 메인 브랜치 먼저 pull 할 수 있음.
+브랜치를 메인으로 바꾸지 못하는 이유는 받아올 값이 없기 때문임.
+
+브랜치는 복사같은 느낌
+기존에 있던 코드를 가지고 와서 작업하는 것.
+메인 코드는 바꾸지 않고 보통 브랜치의 방법을 쓴다.        

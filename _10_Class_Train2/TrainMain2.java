@@ -1,6 +1,6 @@
 package _10_Class_Train2;
 
-public class TrainMain {
+public class TrainMain2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

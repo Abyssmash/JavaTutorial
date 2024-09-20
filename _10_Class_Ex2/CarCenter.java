@@ -14,18 +14,20 @@ public class CarCenter {
 			in.nextLine();
 			if(selNum == 1) {
 				carAdd();
+			}else if(selNum == 2) {
+				carDel();
 			}else if(selNum == 3) {
 				carMod();
 			}else if(selNum == 4) {
 				carList();
 			}else if(selNum == 5) {
 				break;
-			}
-			
+			}			
 		}
 	}
 	public void menu() {
 		System.out.println("1. 등록");
+		System.out.println("2. 삭제");
 		System.out.println("3. 수정");
 		System.out.println("4. 전체보기");
 		System.out.println("5. 종료");
@@ -81,6 +83,18 @@ public class CarCenter {
 		}
 	}
 	public void carDel() {
-		
+		// 시나리오 정의
+		// 번호로 삭제할 자동차 객체를 찾는다. 그리고 삭제
+		System.out.println("삭제할 자동차 번호 입력");
+		String modNumber = in.nextLine();
+		// 객체 찾기 >> 배열 순회 필요
+		for(int i=0; i < carList.length; i++) {
+			if(carList[i]!=null) {
+				if(carList[i].carNumber.equals(modNumber)) {
+					carList[i]=null;
+					break;
+				}
+			}
+		}
 	}
 }

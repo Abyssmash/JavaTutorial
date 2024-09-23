@@ -9,7 +9,9 @@ public class T_one {
 		System.out.println(tNum);
 		System.out.println(tTime);
 	}
-	
+	public String getTnum() {	// tNum에 있는 값을
+		return tNum;			// 넘겨줄 값
+	}
 }
 
 

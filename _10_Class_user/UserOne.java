@@ -7,7 +7,7 @@ public class UserOne {
 			
 			
 			public void usr() {
-				System.out.println(UserID);
-				System.out.println(UserName);
+				System.out.println("ID: "+UserID);
+				System.out.println("이름: "+UserName);
 		}
 }

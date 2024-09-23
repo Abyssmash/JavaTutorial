@@ -41,14 +41,19 @@ public class UserPage {
 			public void uAdd() {
 				System.out.println("사용하실 ID를 입력해주세요.");
 				UserOne uID = new UserOne();
+				String UserID = in.nextLine();
 				System.out.println("이름을 입력해주세요.");
 				String UserName = in.nextLine();
 				for(int i = 0; i < uList.length; i++) {
 					if(uList[i]==null) {
 						uList[i]=uID;
 					}
-				}	
+				}
+				System.out.println("가입 완료 되었습니다.");
 			}
+			
+			// 없는 ID를 입력하면 reset
+			// 있는 ID를 입력하면 입력되어있는 ID와 이름이 아니라 NULL로 표현됨
 			public void uInfo() {
 				System.out.println("찾으실 고객 정보의 ID를 입력해주세요.");
 				String UserID = in.nextLine();
@@ -58,19 +63,19 @@ public class UserPage {
 					}
 				}
 			}
+			
+			// 실행 불가
 			public void uRe() {
 				UserOne temp = new UserOne();
 				System.out.println("수정할 고객 정보의 ID를 입력해주세요.");
 				String UserID = in.nextLine();
 				for(int i = 0; i < uList.length; i++) {
-					if(uList[i]!=null) {
-						if(uList[i]!=null){
+					if(uList[i]!=null) { 
 							uList[i]= null;
 						}
 						System.out.println("초기화 되었습니다.");
 					}
-				}
-				UserOne uID = new UserOne();
+				UserOne uUser = new UserOne();
 				System.out.println("고객 정보를 입력해주세요.");
 				System.out.println("변경할 ID");
 				String UserID = in.nextLine();
@@ -78,12 +83,11 @@ public class UserPage {
 				String UserName = in.nextLine();
 				for(int i = 0; i < uList.length; i++) {
 					if(uList[i]==null) {
-						uList[i]=uID;
-					}else {
-						System.out.println("입력하신 ID와 이름은 중복됩니다.");
+						uList[i]=uUser;
 					}
 				}
 			}
+			
 			public void uDel() {
 				System.out.println("정보를 삭제할 고객의 ID를 입력해주세요.");
 				String UserID = in.nextLine();
@@ -91,23 +95,26 @@ public class UserPage {
 					if(uList[i]!=null) {
 						uList[i]=null;
 					}
-					System.out.println("고객의 정보 삭제가 정상적으로 처리되었습니다.");
 				}
+				System.out.println("고객의 정보 삭제가 정상적으로 처리되었습니다.");
 			}
+			
+			// 저장이 되긴하는데..
 			public void eInfo() {
 				System.out.println("이벤트 정보 등록하기");
-				EventOne eventName = new EventOne();
+				EventOne eName = new EventOne();
 				System.out.println("등록할 이벤트의 이름을 입력해주세요.");
 				String EventName = in.nextLine();
 				System.out.println("이벤트 내용을 입력해주세요");
 				String EventCon = in.nextLine();
 				for(int j = 0; j < eList.length; j++) {
 					if(eList[j]==null) {
-						eList[j]=eventName;
+						eList[j]=eName;
 					}
-					System.out.println("이벤트가 정상적으로 등록되었습니다.");
 				}
+				System.out.println("이벤트가 정상적으로 등록되었습니다.");
 			}
+			// 위와 똑같은 문제 : 이벤트 내용이 안나옴 NULL로 출력됨
 			public void eList() {
 				System.out.println("이벤트 전체보기");
 				for(int j=0; j < eList.length; j++) {

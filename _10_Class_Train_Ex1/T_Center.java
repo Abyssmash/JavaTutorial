@@ -61,7 +61,10 @@ public class T_Center {
 			
 			// 조건을 걸어본다. 기차번호는 유니크하다.
 			for (int i = 0; i < tlist.length; i++) {
-				if(tlist[i].tNum.equals(modNum)) {
+				
+				String mnum = tlist[i].getTnum();
+				if(mnum.equals(modNum)) {
+				//if(tlist[i].tNum.equals(modNum)) {
 					// 기차번호가 유니크 하다는 것은 뒤에 있는 기차 번호랑 중복이 될 수 없다.
 					// 그래서 바로 수정이 가능하다.
 					System.out.println("수정 시간 입력");

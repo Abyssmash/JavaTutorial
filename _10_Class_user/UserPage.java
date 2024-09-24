@@ -73,12 +73,12 @@ public class UserPage {
 					if(uList[i]!=null) { 
 							uList[i]= null;
 						}
-						System.out.println("초기화 되었습니다.");
 					}
+				System.out.println("초기화 되었습니다.");
 				UserOne uUser = new UserOne();
 				System.out.println("고객 정보를 입력해주세요.");
 				System.out.println("변경할 ID");
-				String UserID = in.nextLine();
+				String ID = in.nextLine();
 				System.out.println("변경할 이름");
 				String UserName = in.nextLine();
 				for(int i = 0; i < uList.length; i++) {

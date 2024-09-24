@@ -10,5 +10,4 @@ public class Main {
 		// MainMenu 생성자를 호출한다.
 		new MainMenu();
 	}
-
 }

@@ -17,6 +17,7 @@ public class ListSample {
 		System.out.println(a.get(1));
 		
 		// 모든 리스트를 출력
+		System.out.println("--------------");
 		for(int i = 0; i < a.size(); i++) {
 			System.out.println(a.get(i));
 		}
@@ -27,5 +28,27 @@ public class ListSample {
 				System.out.println(a.get(i));
 			}
 		}
+		// 특정 인덱스 위치에 추가
+		System.out.println("--------------");
+		a.add(1,"쭈꾸미");
+		for(int i = 0; i < a.size(); i++) {
+			System.out.println(i+":"+a.get(i));
+		}
+		// 특정 인덱스 삭제
+		System.out.println("--------------");
+		a.remove(3);
+		for(int i=0; i < a.size(); i++) {
+			System.out.println(i+":"+a.get(i));
+		}
+		// 특정 인덱스 수정
+		System.out.println("--------------");
+		a.set(1, "갑오징어");
+		for(int i=0; i < a.size(); i++) {
+			System.out.println(i+":"+a.get(i));
+		}
+		// 리스트 전체 삭제
+		System.out.println("--------------");
+		a.clear();	
+		System.out.println(a.size());
 	}
 }

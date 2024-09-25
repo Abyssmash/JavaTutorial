@@ -20,6 +20,25 @@ public class MyDogList {
 		dogList[4]=dd;
 		System.out.println(dd);
 		System.out.println(dogList[4]);
+		dogList[1].name="abc";
+		System.out.println(dogList[1].name);
+		System.out.println(dogList[2].name);
+		System.out.println(dogList[3].name);
 		
+		for(int i=0; i < 5; i++) {
+			if(dogList[i]!=null) {
+			System.out.println(dogList[i].name);
+			}
+		}
+		// 강아지 검색
+		String s="땡칠이";
+		for(int i = 0; i < 5; i++) {
+			if(dogList[i]!=null) {
+				if(dogList[i].name.equals(s)) {
+					System.out.println("찾음");
+					break;
+				}
+			}// 만약 땡칠이가 어디에 있는지 알아내려면? i를 찾아냄
+		}
 	}
 }

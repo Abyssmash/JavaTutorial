@@ -1,4 +1,4 @@
-package _13_ArrayList;
+package ArrayListProject;
 
 public class UserOne {
 		String dong = null;

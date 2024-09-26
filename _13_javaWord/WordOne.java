@@ -5,6 +5,6 @@ public class WordOne {
 	String eSol=null;
 		
 	public void prt() {
-		System.out.println("단어:"+eWord+" 뜻:"+eSol);
+		System.out.println("단어:"+eWord+"  뜻:"+eSol);
 	}
 }

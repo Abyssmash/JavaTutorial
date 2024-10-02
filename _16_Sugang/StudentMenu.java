@@ -34,27 +34,27 @@ public class StudentMenu {
 		System.out.println("--회원가입--");
 		System.out.println("아이디를 입력해주세요.");
 		String Id = in.nextLine();
-		System.out.println("이름을 입력해주세요.");
-		String name = in.nextLine();
-		System.out.println("전화번호를 입력해주세요.");
-		String phoneNum = in.nextLine();
-		System.out.println("학년을 입력해주세요.");
-		String grade = in.nextLine();
 		Student nId = new Student();
 		for(int i = 0; i < student.size(); i++) {
 			if(student.get(i).equals(Id)) {
 				System.out.println("아이디가 중복되었습니다.");
 			} else {
 				nId.Id = Id;
-				nId.name = name;
-				nId.phoneNum = phoneNum;
-				nId.grade = grade;
-				student.add(nId);
-				System.out.println("가입되었습니다.");
+				student.add(Id);
 			}
-			nId=null;
-		}
-	}
+		}		
+		System.out.println("이름을 입력해주세요.");
+		String name = in.nextLine();
+		nId.name = name;
+		System.out.println("전화번호를 입력해주세요.");
+		String phoneNum = in.nextLine();
+		nId.phoneNum = phoneNum;
+		System.out.println("학년을 입력해주세요.");
+		String grade = in.nextLine();
+		nId.grade = grade;
+		System.out.println("가입되었습니다.");
+			nId=null;		
+}
 	public static void search() {
 		Scanner in = new Scanner(System.in);
 		System.out.println("이름 검색창입니다.");
@@ -86,6 +86,10 @@ public class StudentMenu {
 		System.out.println("가입 정보 삭제");
 		System.out.println("삭제를 원하신다면 ID를 입력주세요.");
 		String Id = in.nextLine();
-		
+		for(int i = 0; i < student.size(); i++) {
+			if(student.get(i).equals(Id)) {
+				student.remove(i);
+			}
+		}
 	}
 }

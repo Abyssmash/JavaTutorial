@@ -1,6 +1,11 @@
 package _16_Sugang;
 
+import java.util.ArrayList;
+
 public class Study {
+	
+	ArrayList <String> study = new ArrayList<>();
+	
 	// 과목명, 강의실, 담당교수
 	String className = null;
 	String classRoom = null;

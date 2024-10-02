@@ -4,6 +4,7 @@ public class Main {
 	// 접근제어자 공용변수 리턴타입 메서드명 (매개변수)
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// static 뒤에 final을 적으면 고칠 수 없게 된다.
 
 		String name = Thread.currentThread().getName();
 		// 스레드가 코드를 실행한다.
@@ -25,6 +26,21 @@ public class Main {
 		System.out.println(a);
 		System.out.println(MemberADM.compayName);
 		MemberADM.prt();
+		
+		MemberADM.compayName="Homan";
+		System.out.println(MemberADM.compayName);
+		MemberADM mm = new MemberADM();
+		mm.compayName="abc";
+		mm.name="a";
+		MemberADM mmm = new MemberADM();
+		mmm.name="b";
+		mmm.compayName="kkk";
+		System.out.println(mm.name);
+		System.out.println(mm.compayName);
+		
+		// MemberADM.teamName="kkk";
+		// 상수는 초기값이 결정되면 값을 변경할 수 없다.
+		
 		
 		// 누군가 의도적으로 이름을 바꿀 수 있다. 주의해야함 * 위험성, 취약성
 		MemberADM.compayName="Homan";

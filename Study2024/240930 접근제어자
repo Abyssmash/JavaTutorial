@@ -13,7 +13,7 @@ ex)
 src (src에 패키지를 생성)
 - package {a- (M.java), (K.java)}
 		  {b - (P.java)}
-(a, b라는 패키지가 있다.)
+(패키지 안에는 a, b라는 클래스가 있다.)
 
 M.java
 K k = new K();

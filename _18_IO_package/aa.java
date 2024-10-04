@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.OutputStream;
+// ctrl+shift+O 하면 자동으로 생성됨.
 
 public class aa {
 	public static void main(String[] args) {

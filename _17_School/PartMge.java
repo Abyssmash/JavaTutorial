@@ -1,4 +1,4 @@
-package School;
+package _17_School;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,6 +9,9 @@ public class PartMge {
 	ArrayList <Part> plist = new ArrayList<>();
 	// setter가 필요 없음.
 	
+	public ArrayList <Part> getPlist() {
+		return plist;
+	}
 	public void menu() {
 		Scanner in = new Scanner(System.in);
 		while(true) {
@@ -18,16 +21,13 @@ public class PartMge {
 		in.nextLine();
 		if(num == 1) {
 			add();
-		}else if(num == 3) {
+		}else if(num == 2) {
 			list();
 		}else {
 			break;
 		}
 	}
 }
-	public ArrayList<Part> getPlist() {
-		return plist;
-	}
 	public void add() {
 		Scanner in =  new Scanner(System.in);
 		Part newTemp = new Part();

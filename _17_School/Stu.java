@@ -1,4 +1,4 @@
-package School;
+package _17_School;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -57,7 +57,7 @@ public class Stu {
 	public String getId() {
 		return id;
 	}
-	public void setId() {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {

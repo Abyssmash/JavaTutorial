@@ -1,4 +1,4 @@
-package School;
+package _17_School;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -46,6 +46,8 @@ public class StuMge {
 			newTemp.setId(id);
 			newTemp.setName(name);
 			slist.add(newTemp);
+		}else {
+			System.out.println(id+"는 사용중");
 		}
 	}
 	private void search() {
@@ -76,14 +78,15 @@ public class StuMge {
 			slist.remove(returnValue);
 			System.out.println("삭제되었습니다.");
 		}
-		// for문은 아이디를 찾는 반복문
-		// 아이디를 찾는다는 것은 검색이나 입력에서도 응용할 수 있다.
-		// 그래서 이 코드의 재사용성을 높이기 위해서 메서드 분리
-		for(int i = 0; i < slist.size(); i++) {
-			if(slist.get(i).getId().equals(delId)) {
-				slist.remove(i);
-				break;			
-			}
-		}
+//		for문은 아이디를 찾는 반복문
+//		아이디를 찾는다는 것은 검색이나 입력에서도 응용할 수 있다.
+//		그래서 이 코드의 재사용성을 높이기 위해서 메서드 분리
+	
+//		for(int i = 0; i < slist.size(); i++) {
+//			if(slist.get(i).getId().equals(delId)) {
+//				slist.remove(i);
+//				break;			
+//			}
+//		}
 	}
 }

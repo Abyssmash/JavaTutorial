@@ -1,4 +1,4 @@
-package School;
+package _17_School;
 
 // 추상화:
 public class Part {

@@ -1,4 +1,4 @@
-package School;
+package _17_School;
 
 public class Main {
 

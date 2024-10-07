@@ -15,15 +15,37 @@ public class MemberAdmin {
 		System.out.println("close"); */
 		test();
 	}
-	private void test() {
-		File file = new File("Output.txt");
-		FileWriter writer;
-		try { // 직접 예외처리를 하는 구문
-			writer = new FileWriter(file);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	private void test1() {
+		MemberOne [] mm = new MemberOne[5];
+		try {
+			System.out.println("1");
+			System.out.println(mm[0]);
+			System.out.println("2");
+			//System.out.println(mm[1].getId());
+			System.out.println(mm[1]);
+			System.out.println("정상종료");
+		} catch(Exception e) {
+			System.out.println("예외발생2");
+		}finally {
+			System.out.println("finally 블록");
 		}
-		BufferedWriter bufferedWriter = new BufferedWriter(writer);
+	}
+	private void test() {
+		// 직접 예외처리를 하는 구문
+		// 예제는 예외처리를 반드시 해줘야한다.
+		// 예외처리 방법은 직접처리 > try catch finally
+		try {
+			 // try 블록은 예외가 발생할 코드를 작성한다.
+			 // 예외가 발생하면 더이상 코드를 실행하지 않고 catch블록으로 이동
+			File file = new File("Output.txt");
+			FileWriter writer;
+			writer = new FileWriter(file);
+			BufferedWriter bufferedWriter = new BufferedWriter(writer);
+		} catch (IOException e) {
+			// catch 소괄호안의 예외가 발생했을 때 처리해주는 블록
+			e.printStackTrace();
+		} finally {
+			// try 구문을 빠져 나갈때, 실행됨. 예외 발생 여부 상관없이 실행됨.
+		}
 	}
 }

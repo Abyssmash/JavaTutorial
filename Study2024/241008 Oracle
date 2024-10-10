@@ -2,6 +2,9 @@
 
 DTO + DAO = 클래스 설계
 싱글톤, Static, final = 디자인
+
+DTO = Data Transfer Object
+DAO = Data Access Object
 --------------------------------------------------
 
 운영체제(OS) = RAM + HDD + KeyBoard + Lan

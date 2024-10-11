@@ -1,0 +1,17 @@
+2024.10.11
+
+상속
+정의: Super Class의 자원을 Sub Class로 확장
+특징: 단일 상속, 중복 코드 제거, 통일성
+> 여러 클래스를 만들어 사용하는 것보다 중복적으로 쓰이는 코드가 있다면 
+super class를 두고 객체를 만들어 super class만 수정해주는 것이 훨씬 좋다.
+
+is a 관점
+: Super Class를 가지고 새로운 Class를 만든다.
+
+다형성 특징을 이용하여 Super Class 변수로 Sub Class 객체 참조
+
+추상 메소드
+: 메소드 선언을 했지만 구현은 하지 않은 상태 (abstract + ;)
+
+(1) sub class가 강제로, 반드시 override 해야한다.

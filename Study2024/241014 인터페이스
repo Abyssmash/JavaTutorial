@@ -39,12 +39,13 @@ why?
 	DAO같은 경우는 의존도가 높기 때문에 인터페이스를 사용하는 것이 좋다.
 	
 <인터페이스의 구조>
-public interface MemberDAO(){	  implements	OMember in MemberDAO		MMember in M
+public interface MemberDAO(){	  implements	OMember in MemberDAO		MMember in MemberDAO
 	public void add();			------------->  @override	@override 		add()	del()
-	public void del();							 add()		 del()
+	public void del();							 add()		 del()			* 데이터는 다를 수 있으나 같은 기능
 }
 : 인터페이스는 추상 메소드만 가질 수 있다.
 	add와 del이라는 기능만 정의한 것
+	실제 동작하는 객체 = OMember
 	
 > 결론적으로 기능을 변경하고 싶다면 Sub Class에 있는 인터페이스만 바꿔주면 된다.
   의존도가 낮아진다.
